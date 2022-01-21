@@ -1,0 +1,6 @@
+This program is the start of our core logic for a mobile version of Ubrew-2 called UBrew2-Mobile.To run it, open and
+run the mainActivity file. This file will import the necesary packages and then prompt the user to input 2 or 3 in order
+to select the main activity. Activity 2 is a registration activity, Activity 3 is a listing of all the ingredients
+currently hard coded in the app.
+
+Happy Brewing and remember, have a HomeBrew.
