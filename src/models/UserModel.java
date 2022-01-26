@@ -1,4 +1,4 @@
-package Models;
+package models;
 /** this class represents a user and the needed functions to interact with it */
 public class UserModel {
     private String firstName;

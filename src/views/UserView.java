@@ -1,4 +1,4 @@
-package Views;
+package views;
 import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,6 +6,11 @@ import java.util.ArrayList;
 
 /**this class handles the view functionality for a user object */
 public class UserView {
+
+    /**
+     *
+     * returns a printed out view of the login
+     */
     public static String[] login(){
         String[] result =new String[2];
 
@@ -25,6 +30,10 @@ public class UserView {
         return result;
     }
 
+    /**
+     * Returns a printed out view for registering
+     *
+     */
     public static String[] register(){
         ArrayList<String> input = new ArrayList<String>();
         Scanner scanner = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
@@ -41,6 +50,11 @@ public class UserView {
         return result;
     }
 
+    /**
+     * displays the name of a user
+     * @param firstname
+     * @param lastname
+     */
     public static void displayName( String firstname,String lastname){
         System.out.println("Name: " +firstname + " " + lastname);
     }

@@ -1,28 +1,29 @@
-package Models;
+package models;
 /** this class represents the hop object and methods needed to interact with it*/
 public class HopModel extends IngredientModel {
     private String unit="oz";
     //public String Name;
     private double alphaAcid;
-/*
-    public HopModel(){
-        alphaAcid = 0;
+
+    /**
+     *Constructor that creates a hop Model instance
+     */
+    public HopModel(String hopname, double alphaacid){
+        super( hopname);
+        this.alphaAcid = alphaacid;
     }
 
-    public HopModel(float aa){
-        this.alphaAcid = aa;
-    }
-*/
-    public HopModel(String na, double aa){
-        super( na);
-        this.alphaAcid = aa;
-    }
-
+    /**
+     *returns the AlphaAcid Member of an instance
+     */
     public double getAlphaAcid(){
         return this.alphaAcid;
     }
 
 
+    /**
+     *Sets the alphaAcid Member of an instance
+     */
     public void setAlphaAcid(double aa){
         this.alphaAcid = aa;
         //Move these to the controller;
@@ -35,8 +36,13 @@ public class HopModel extends IngredientModel {
         }
     }
 
+    /**
+     *Returns the unit associated with a hopModel instane
+     */
     public String getUnit(){
         return this.unit;
     }
+
+
 
 }

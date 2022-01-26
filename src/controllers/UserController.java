@@ -1,6 +1,6 @@
-package Controllers;
-import Models.*;
-import Views.*;
+package controllers;
+import models.*;
+import views.*;
 /** this class handles thes view and the model to interact with users. **/
 public class UserController {
 
