@@ -1,0 +1,8 @@
+Type:Hop|Name:Cascade Hops|SpecialParam:5.2|Unit:oz
+Type:Malt|Name:Munich Malt|SpecialParam:1.037|Unit:lbs
+Type:Malt|Name:Special B|SpecialParam:1.030|Unit:lbs
+Type:Malt|Name:Wheat Malt|SpecialParam:1.039|Unit:lbs
+Type:Hop|Name:Citra|SpecialParam:3.1|Unit:oz
+Type:Hop|Name:Test|SpecialParam:7.2|Unit:oz
+Type:Malt|Name:test malt|SpecialParam:1.72|Unit:lbs
+Type:Hop|Name:Test|SpecialParam:7.2|Unit:oz

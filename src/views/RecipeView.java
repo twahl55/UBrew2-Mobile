@@ -41,8 +41,8 @@ public class RecipeView {
         return recipe;
     }
     /** prompts users for ingredients to add to a recipe */
-    public static HashMap<String,Float> promptForIngredients(ArrayList<IngredientModel> ingredientList){
-        HashMap<String, Float> result = new HashMap<String, Float>();
+    public static HashMap<IngredientModel,Float> promptForIngredients(ArrayList<IngredientModel> ingredientList){
+        HashMap<IngredientModel, Float> result = new HashMap<IngredientModel, Float>();
         int index = 1;
         float amount = 0;
         try {
@@ -59,7 +59,7 @@ public class RecipeView {
                 else index = index-1;
                System.out.println("Input an amount");
                amount = scanner.nextFloat();
-               result.put(ingredientList.get(index).getName(), amount);
+               result.put(ingredientList.get(index), amount);
                ingredientList.remove(index);
            }
 
@@ -101,5 +101,19 @@ public class RecipeView {
             System.out.println("There was an error reading in the steps. ");
         }
         return steps;
+    }
+
+    public static double promptForGravity(String gravityType){
+        Double gravity = 0.0;
+        try {
+            System.out.println("Please enter in your " + gravityType + " gravity: ");
+
+            Scanner scanner = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+            gravity=scanner.nextDouble();
+        }
+        catch(Exception ex){
+            Logger.writeToLog(ex);
+        }
+        return gravity;
     }
 }
