@@ -2,7 +2,7 @@ package models;
 
 /** Model for representing a malt instance */
 public class MaltModel extends IngredientModel {
-    public String unit = "lbs";
+    private String unit = "lbs";
     private double extractPotential;
 
     /**

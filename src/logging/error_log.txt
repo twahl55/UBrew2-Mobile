@@ -1,1 +1,5 @@
 {Log Entry:{ Date: Tue Jan 25 23:48:49 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Tue Feb 08 21:32:50 MST 2022,  message: class models.MaltModel declares multiple JSON fields named unit }}
+{Log Entry:{ Date: Tue Feb 08 21:39:29 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Tue Feb 08 21:44:09 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Tue Feb 08 21:50:55 MST 2022,  message: class models.MaltModel declares multiple JSON fields named unit }}

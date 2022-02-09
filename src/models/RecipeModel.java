@@ -3,11 +3,11 @@ package models;
 import javax.naming.directory.InvalidAttributesException;
 import java.util.*;
 import logging.*;
-
+import java.io.Serializable;
 /**
  * A class for representing a recipe.
  */
-public class RecipeModel {
+public class RecipeModel implements Serializable{
 
     private String name;
     private float abv;

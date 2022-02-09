@@ -146,6 +146,7 @@ public class IngredientController {
         return ingredients;
     }*/
 
+    /** Converts list of strings to list of ingredient models */
     public static ArrayList<IngredientModel> stringistToModel(List<String> list){
         ArrayList<IngredientModel> result = new ArrayList<IngredientModel>();
         for(String model: list){

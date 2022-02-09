@@ -9,7 +9,7 @@ public class mainActivity {
     public static void main(String[] args){
         System.out.println("Welcome To UBrew2-Mobile. Please enter " /*1 to login, or*/ + "2 to register or 3 to print " +
                 "out a list of our ingredients or 4 to add a new Ingredient or 5 to create a recipe or 6 to calculate "+
-                " abv or 7 to calculate an Original gravity estimate");
+                " abv or 7 to calculate an Original gravity estimate or 8 to calculate Strike Water");
         Scanner myObj = new Scanner(System.in);
         Integer decision = Integer.parseInt(myObj.nextLine());
 
@@ -34,6 +34,9 @@ public class mainActivity {
                 break;
             case 7:
                 new RecipeController().gravity_estimation(65, 5);
+                break;
+            case 8:
+                new RecipeController().calculateStrikeWaterPrompts();
                 break;
             default:
                 System.out.println("You didnt enter in a valid selection try again:");

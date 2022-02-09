@@ -4,7 +4,7 @@ public abstract class IngredientModel implements java.io.Serializable{
 
     private  String name;
 
-    private String unit;
+   // private abstract String unit;
 
     /**
      *IngredientModel Constructor

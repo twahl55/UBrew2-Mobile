@@ -51,12 +51,12 @@ public class RecipeView {
                IngredientView.displayWithSelector(ingredientList);
                Scanner scanner = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
                System.out.println("Enter your selection:");
-                String line = scanner.nextLine();
+               String line = scanner.nextLine();
                index = Integer.parseInt(line);
                if(index==0){
                    break;
                }
-                else index = index-1;
+               else index = index-1;
                System.out.println("Input an amount");
                amount = scanner.nextFloat();
                result.put(ingredientList.get(index), amount);
@@ -71,7 +71,7 @@ public class RecipeView {
         return result;
     }
 
-    /**prompts user for steeps to brew */
+    /**prompts user for steps to brew */
     public static ArrayList<String> promptForSteps(){
         ArrayList<String> steps = new ArrayList<String>();
         int counter = 0;
@@ -103,6 +103,7 @@ public class RecipeView {
         return steps;
     }
 
+    /**prompts user for gravity readings */
     public static double promptForGravity(String gravityType){
         Double gravity = 0.0;
         try {
@@ -115,5 +116,48 @@ public class RecipeView {
             Logger.writeToLog(ex);
         }
         return gravity;
+    }
+
+    /** prompt for a specific recipe */
+    public static RecipeModel selectRecipe(ArrayList<RecipeModel> recipes){
+        RecipeModel recipe = null;
+        try{
+             while(true) {
+                 System.out.println("Please choose a recipe by entering the number next to a recipe(0 to exit)");
+                 displayRecipesWithSelector(recipes);
+                 Scanner scanner = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+                 System.out.println("Enter your selection:");
+                 String line = scanner.nextLine();
+                 int index = Integer.parseInt(line);
+                 if (index == 0) {
+                     break;
+                 } else if(index -1>recipes.size()){
+                     System.out.println("Invalid Choice. Please try again.");
+                 }else{
+                     recipe = recipes.get(index-1);
+                     break;
+                 }
+
+             }
+         }catch(Exception e){
+            Logger.writeToLog(e);
+            recipe = null;
+        }
+        return recipe;
+    }
+
+    /** displays all recipes */
+    public static void displayRecipesWithSelector(ArrayList<RecipeModel> recipes){
+        int selector = 0;
+        for(RecipeModel recipe : recipes){
+            selector++;
+            String output = selector + " " + recipe.getName();
+            System.out.println(output);
+        }
+    }
+
+    /** displays the strikewater you would need */
+    public static void displayStrikeWater(double strikewater){
+        System.out.println("To brew this recipe you would need " + strikewater + " Gallons of strikewater");
     }
 }
