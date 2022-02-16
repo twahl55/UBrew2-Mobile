@@ -7,6 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/** Tests for the Ingredient functions.
+ *
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
 class IngredientControllerTest {
 
     @org.junit.jupiter.api.Test

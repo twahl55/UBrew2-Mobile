@@ -1,7 +1,12 @@
 package controllers;
 import models.*;
 import views.*;
-/** this class handles thes view and the model to interact with users. **/
+/** this class handles thes view and the model to interact with users.
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
 public class UserController {
 
     public void login(){
@@ -23,9 +28,4 @@ public class UserController {
             System.out.println("Looks like you're missing a parameter try again. ");
         }
     }
-
-    /* Need to add password hashging and checking
-    private String hashPassword(String pss){
-        BCrypt
-    }*/
 }

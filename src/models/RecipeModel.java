@@ -6,7 +6,11 @@ import logging.*;
 import java.io.Serializable;
 /**
  * A class for representing a recipe.
- */
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
 public class RecipeModel implements Serializable{
 
     private String name;

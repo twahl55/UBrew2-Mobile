@@ -1,5 +1,10 @@
 package models;
-/** this class represents a user and the needed functions to interact with it */
+/** this class represents a user and the needed functions to interact with it
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
 public class UserModel {
     private String firstName;
     private String lastName;

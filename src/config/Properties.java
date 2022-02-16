@@ -9,7 +9,11 @@ import java.nio.file.Paths;
 
 /**
  * This class gets the config properties for the program.
- */
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
 public class Properties {
     /**
      * gets the properies into the prop object

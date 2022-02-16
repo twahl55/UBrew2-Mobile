@@ -3,7 +3,12 @@ package controllers;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+/** Test for the Recipes
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
 class RecipeControllerTest {
 
     @Test

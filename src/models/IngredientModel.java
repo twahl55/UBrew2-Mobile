@@ -1,10 +1,13 @@
 package models;
-/** this class represents an ingredient and necesary functions for interacting with it*/
+/** this class represents an ingredient and necesary functions for interacting with it
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
 public abstract class IngredientModel implements java.io.Serializable{
 
     private  String name;
-
-   // private abstract String unit;
 
     /**
      *IngredientModel Constructor

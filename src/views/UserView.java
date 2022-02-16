@@ -4,7 +4,12 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-/**this class handles the view functionality for a user object */
+/**this class handles the view functionality for a user object
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
 public class UserView {
 
     /**

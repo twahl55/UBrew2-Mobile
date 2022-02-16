@@ -5,7 +5,12 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Date;
 
-/** a class for logging erors and debugging statements. */
+/** a class for logging erors and debugging statements.
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
 public class Logger {
     /**function for writing to a log */
     public static  void writeToLog(int level, String message){

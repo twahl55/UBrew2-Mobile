@@ -7,7 +7,12 @@ import java.io.*;
 import java.util.*;
 import java.util.List;
 
-/** This class controls interactions between ingredient model and ingredient view */
+/** This class controls interactions between ingredient model and ingredient view
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
 public class IngredientController {
     /**
      * List all of the current ingredients. This will eventually fetch from the db.

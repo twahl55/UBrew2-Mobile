@@ -8,7 +8,11 @@ import models.MaltModel;
 
 /**
  * This class handles the views associated with ingredients
- */
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
 public class IngredientView {
     /**
      * displays an arrayList of ingredients

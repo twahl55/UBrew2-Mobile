@@ -1,5 +1,10 @@
 package models;
-/** Class that houses RecipeIngredients */
+/** Class that houses RecipeIngredients
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
 public class RecipeIngredient<T extends IngredientModel> {
 
     private T ingredient;

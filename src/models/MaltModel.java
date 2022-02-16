@@ -1,6 +1,11 @@
 package models;
 
-/** Model for representing a malt instance */
+/** Model for representing a malt instance
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
 public class MaltModel extends IngredientModel {
     private String unit = "lbs";
     private double extractPotential;

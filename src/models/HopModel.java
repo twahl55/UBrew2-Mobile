@@ -1,5 +1,10 @@
 package models;
-/** this class represents the hop object and methods needed to interact with it*/
+/** this class represents the hop object and methods needed to interact with it
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
 public class HopModel extends IngredientModel {
     private String unit="oz";
     //public String Name;

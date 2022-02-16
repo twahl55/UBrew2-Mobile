@@ -9,21 +9,26 @@ import logging.*;
 import java.util.List;
 import java.text.DecimalFormat;
 import com.google.gson.Gson;
+import java.util.concurrent.Callable;
+import java.util.concurrent.*;
 
 /**
  * This class is used to tie together the recipe veiw and model
- */
-public class RecipeController {
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
+public class RecipeController{
 
     /** this method contains the logic for creating a recipe.*/
     public RecipeModel createRecipe(){
         RecipeModel recipe = RecipeView.createRecipe();
-        //Scanner myscan = new Scanner(System.in);
         ArrayList<IngredientModel> ingredients = IngredientController.readFromFile();
         recipe.addIngredientAmount(RecipeView.promptForIngredients(ingredients));
         recipe.addNotes(RecipeView.promptForSteps());
         writeRecipeToFile(recipe);
-        System.out.println(recipe.toString());
+        System.out.println(recipe);
         return recipe;
     }
 
@@ -92,6 +97,26 @@ public class RecipeController {
         return result;
     }
 
+    public Double gravity_estimation(List<RecipeIngredient<MaltModel>> malts, double efficiency, double volume){
+        double result =  0;
+        double sugar_points = 0;
+        try {
+            if(efficiency > 1){efficiency = efficiency/100;}
+            for (RecipeIngredient<MaltModel> m : malts) {
+                double amount = m.getAmount();
+                double potential = ((MaltModel)(m.getIngredient())).getExtractPotential();
+                sugar_points += amount * (potential - 1) * 1000;
+            }
+            double efficiency_points = sugar_points * efficiency;
+            result = 1 + (efficiency_points / volume) / 1000;
+            System.out.println("Your gravity estimation is :" + result);
+        }
+        catch(Exception ex){
+            Logger.writeToLog(ex);
+        }
+        return result;
+    }
+
     /** write the recipe to a file */
     public boolean writeRecipeToFile(RecipeModel recipe){
         Gson gson = new Gson();
@@ -146,5 +171,54 @@ public class RecipeController {
         double amountOfWaterQuarts = grainWeight * mashThickness;
         double amountOfWaterGallons = amountOfWaterQuarts/4;
         return amountOfWaterGallons;
+    }
+
+    /** calculate the international bitterness units */
+    public Double calculateIbu(List<RecipeIngredient<HopModel>> hops,double originalGravity, double volume){
+        double result = 0.0;
+
+        for(RecipeIngredient<HopModel> hop :hops){
+            result+=(hop.getAmount()*((HopModel)(hop.getIngredient())).getAlphaAcid() *18.8)/7.25;
+        }
+        return result;
+    }
+
+    /** Caclulate all the calculatable fields for the recipe */
+    public RecipeModel calculateAll(RecipeModel recipe){
+        double originalGravity = gravity_estimation( recipe.getRecipeMalts(), 65, 5);
+        ExecutorService service = Executors.newFixedThreadPool(5);
+        Callable<Double> ibuThread =()->{
+            return calculateIbu( recipe.getRecipeHops(), originalGravity,5);};
+        Future<Double>  future2 = service.submit(ibuThread);
+        Callable<Double> abvThread = ()->{
+            return (Double)calculateAbv(recipe.getOg(), recipe.getFg());
+        };
+        Future<Double> future3 = service.submit(abvThread);
+
+        recipe.setOg((float)originalGravity);
+        try {
+            recipe.setIbu(future2.get().floatValue());
+        }catch(Exception ex){
+            Logger.writeToLog(ex);
+        }
+        try {
+            recipe.setAbv(future3.get().floatValue());
+        }
+        catch(Exception ex) {
+            Logger.writeToLog((ex));
+        }
+        return recipe;
+    }
+
+    /**Perform all logic around calculations and retrieval or recipe for calculations */
+    public void RecipeCalculations(){
+        ArrayList<RecipeModel> recipes = readRecipesFromFile();
+        RecipeModel recipe = RecipeView.selectRecipe(recipes);
+        System.out.println("Recipe Before Re Calculations");
+        RecipeView.printRecipe(recipe);
+        recipe = calculateAll(recipe);
+        System.out.println("Recipe After Calcutations");
+        RecipeView.printRecipe(recipe);
+
     }
 }

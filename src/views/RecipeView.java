@@ -9,7 +9,12 @@ import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**Controls views of the recipe and userinteraction with the recipe*/
+/**Controls views of the recipe and userinteraction with the recipe
+ *
+ * Author: Tyler Wahl
+ * Date: February 15, 2022
+ * Course:CS-622
+ * */
 public class RecipeView {
 
     /** View for creating a recipe*/
@@ -159,5 +164,8 @@ public class RecipeView {
     /** displays the strikewater you would need */
     public static void displayStrikeWater(double strikewater){
         System.out.println("To brew this recipe you would need " + strikewater + " Gallons of strikewater");
+    }
+    public static void printRecipe(RecipeModel recipe){
+        System.out.println(recipe);
     }
 }
