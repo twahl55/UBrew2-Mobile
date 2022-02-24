@@ -12,6 +12,11 @@ public class UserModel {
     private String passwordHash;
     private boolean isAdmin;
     private boolean isEnabled;
+    private String userId;
+
+    public UserModel(){
+        return;
+    }
 
     public UserModel(String fname, String lname, String mail, String phash){
         this.firstName = fname;
@@ -67,5 +72,10 @@ public class UserModel {
     public void setIsEnabled(boolean enabled){
         this.isEnabled= enabled;
         return;
+    }
+
+    public String getUserId(){return this.userId;}
+    public void setUserId(String userid){
+        this.userId = userid;
     }
 }

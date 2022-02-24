@@ -3,6 +3,9 @@ import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import controllers.UserController;
+import logging.Logger;
+import models.UserModel;
 
 /**this class handles the view functionality for a user object
  *
@@ -33,6 +36,41 @@ public class UserView {
             result[1] = new String(System.console().readPassword());
         }
         return result;
+    }
+
+    /**
+     * handles an unsuccesful login
+     */
+    public static UserModel unsuccessfulLogin(){
+        UserModel user = null;
+        System.out.println("You've entered incorrect credentials. Would you like to try again? 1 for yes 0 for no");
+        try {
+            while(true) {
+                Scanner scanner = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+                int choice = scanner.nextInt();
+                if(choice == 0){
+                    System.out.println("Ok. Thank you for your time. GoodBye. ");
+                    break;
+                }
+                if(choice == 1){
+                    user = (new UserController()).login();
+                    break;
+                }
+                else{
+                    System.out.println("Invalid Selection please try again. ");
+                }
+
+            }
+        }catch(Exception ex){
+            Logger.writeToLog(ex);
+        }
+        return user;
+    }
+    /**
+     * Handles a succesful login
+     */
+    public static void successfulLogin(){
+        System.out.println("You have successfully logged in.");
     }
 
     /**

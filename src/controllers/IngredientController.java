@@ -18,10 +18,11 @@ public class IngredientController {
      * List all of the current ingredients. This will eventually fetch from the db.
      */
     public void listAll() {
-        ArrayList<IngredientModel> ingredients = readFromFile();
+        ArrayList<IngredientModel> ingredients = getIngredientsFromDB("");
         display(ingredients);
     }
 
+    /** displays ingredients */
     public void display(ArrayList<IngredientModel> ingredients){
         ArrayList<IngredientModel> hops = new ArrayList<IngredientModel>();
         ArrayList<IngredientModel> malts = new ArrayList<IngredientModel>();
@@ -41,8 +42,40 @@ public class IngredientController {
      */
     public void createIngredient(){
         IngredientModel model = IngredientView.createIngredient();
-        Boolean suuccess =addToFile (new ArrayList<>(Arrays.asList(model)));
+        Boolean success =addToDB (new ArrayList<>(Arrays.asList(model)));
+        if(success){
+            ArrayList<IngredientModel>ingredients =  getIngredientsFromDB("");
+            display(ingredients);
+        }
+    }
 
+    /** gets ingredients from the DB */
+    public static ArrayList<IngredientModel> getIngredientsFromDB( String name){
+        String query ="Select  \"Name\", specialparam, type, id FROM ingredients ";
+        if(name != "") {
+            query += " WHERE \"Name\" = '" + name + "'";
+        }
+        query+= " ORDER BY \"Name\" ASC";
+        ArrayList<IngredientModel> ingredients = new ArrayList<IngredientModel>();
+        try {
+           ingredients  = (new DBHelper()).getIngredients(query);
+        }
+        catch(Exception ex){
+            Logger.writeToLog(ex);
+        }
+        return ingredients;
+    }
+
+    /** adds an array list of ingredient models to the db by way of the dbhelper*/
+    public static boolean addToDB(ArrayList<IngredientModel> ingredients){
+        boolean success = false;
+        try {
+           success =  (new DBHelper()).createIngredients(ingredients);
+        }
+        catch (Exception e){
+            Logger.writeToLog(e);
+        }
+        return success;
     }
 
     /**

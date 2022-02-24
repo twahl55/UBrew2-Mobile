@@ -6,3 +6,4 @@ Type:Hop|Name:Citra|SpecialParam:3.1|Unit:oz
 Type:Hop|Name:Test|SpecialParam:7.2|Unit:oz
 Type:Malt|Name:test malt|SpecialParam:1.72|Unit:lbs
 Type:Hop|Name:Test|SpecialParam:7.2|Unit:oz
+Type:Hop|Name:EK Goldings|SpecialParam:12.6|Unit:oz

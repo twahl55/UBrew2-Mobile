@@ -18,6 +18,12 @@ public class MaltModel extends IngredientModel {
         this.extractPotential = ep;
     }
 
+    public MaltModel(String na, double ep, int id){
+        super(na);
+        this.extractPotential = ep;
+        this.setId(id);
+    }
+
     /**
      *returns the Extract Potential Member of an instance
      */

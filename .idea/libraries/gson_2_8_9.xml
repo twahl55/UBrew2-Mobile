@@ -2,6 +2,9 @@
   <library name="gson-2.8.9">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/resources/gson-2.8.9.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/postgresql-42.3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/jbcrypt-0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/postgresql-42.3.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

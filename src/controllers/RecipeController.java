@@ -3,6 +3,7 @@ import models.*;
 import views. *;
 
 import java.io.*;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Scanner;
 import logging.*;
@@ -22,19 +23,45 @@ import java.util.concurrent.*;
 public class RecipeController{
 
     /** this method contains the logic for creating a recipe.*/
-    public RecipeModel createRecipe(){
+    public RecipeModel createRecipe(UserModel user){
         RecipeModel recipe = RecipeView.createRecipe();
-        ArrayList<IngredientModel> ingredients = IngredientController.readFromFile();
+        ArrayList<IngredientModel> ingredients = IngredientController.getIngredientsFromDB("");
         recipe.addIngredientAmount(RecipeView.promptForIngredients(ingredients));
         recipe.addNotes(RecipeView.promptForSteps());
-        writeRecipeToFile(recipe);
+        boolean success = addRecipeToDB(recipe,user.getUserId() );
         System.out.println(recipe);
         return recipe;
+    }
+/** adds recipe to the database*/
+    public boolean addRecipeToDB(RecipeModel recipe, String userId){
+        boolean success = false;
+        int recipeId = 0;
+        try{
+            recipeId = (new DBHelper()).createRecipe(recipe, userId );
+            recipe.setId(recipeId);
+            addRecipeIngredients(recipe);
+            success = true;
+        }
+        catch(Exception e){
+            Logger.writeToLog(e);
+            success = false;
+        }
+        return success;
+    }
+
+    /**Add recipeIngredients appropriately */
+    public void addRecipeIngredients(RecipeModel recipe){
+        try{
+            (new DBHelper()). addRecipeIngredientsToDB(recipe);
+        }
+        catch(Exception ex){
+            Logger.writeToLog(ex);
+        }
     }
 
     /** controls prompts for getting the recipe strike water*/
     public void calculateStrikeWaterPrompts(){
-        ArrayList<RecipeModel> recipes = readRecipesFromFile();
+        ArrayList<RecipeModel> recipes = readRecipesFromDB("");
         RecipeModel recipe = RecipeView.selectRecipe(recipes);
         double strikeWater = calculateStrikeWaterEstimation(recipe);
         RecipeView.displayStrikeWater(strikeWater);
@@ -134,7 +161,7 @@ public class RecipeController{
     }
 
     /** Read the recipes from a file */
-    public ArrayList<RecipeModel> readRecipesFromFile(){
+   /* public ArrayList<RecipeModel> readRecipesFromFile(){
         Gson gson = new Gson();
         Boolean success = false;
         String dir = config.Properties.getProperty("recipeFile");
@@ -152,6 +179,45 @@ public class RecipeController{
             Logger.writeToLog(ex);
         }
         return recipes;
+    }*/
+
+    /** reads the recipes from the dtabase */
+    public static ArrayList<RecipeModel> readRecipesFromDB(String userId){
+        // Gson gson = new Gson();
+        Boolean success = false;
+        RecipeModel recipe = null;
+        ArrayList<RecipeModel>recipes = new ArrayList<RecipeModel>();
+        String query = "SELECT \"Name\", \"ABV\", \"IBU\", \"OG\", \"FG\", \"styleId\",  id FROM recipes where public = true OR" +
+                " 'userId' ='" + userId + "'";
+        try {
+            recipes = (new DBHelper()).getRecipes(query);
+        }
+        catch(Exception ex) {
+            recipe = null;
+            Logger.writeToLog(ex);
+        }
+        return recipes;
+    }
+
+    /** get recipe by recipeid */
+    public RecipeModel getRecipeById(int recipeId){
+        String query = "Select \"Name\", \"ABV\", \"IBU\", \"OG\", \"FG\", \"styleId\", public FROM Recipes WHERE id=?";
+        RecipeModel recipe = null;
+        try{
+
+            DBHelper helper = new DBHelper();
+           recipe = (new DBHelper()).getRecipeById(query, recipeId);
+            List<RecipeIngredient<MaltModel>> malts = helper.getRecipeMaltsByRecipeId(recipeId);
+            List<RecipeIngredient<HopModel>> hops = helper.getRecipeHopsByRecipeId(recipeId);
+            recipe.addRecipeHops(hops);
+            recipe.addRecipeMalts(malts);
+            System.out.println(recipe.toString());
+        }
+        catch(Exception e){
+            Logger.writeToLog(e);
+        }
+        return recipe;
+
     }
 
     /** calculate the graing weight */
@@ -211,9 +277,10 @@ public class RecipeController{
     }
 
     /**Perform all logic around calculations and retrieval or recipe for calculations */
-    public void RecipeCalculations(){
-        ArrayList<RecipeModel> recipes = readRecipesFromFile();
+    public void RecipeCalculations(UserModel user){
+        ArrayList<RecipeModel> recipes = readRecipesFromDB(user.getUserId());
         RecipeModel recipe = RecipeView.selectRecipe(recipes);
+        recipe = getRecipeById(recipe.getId());
         System.out.println("Recipe Before Re Calculations");
         RecipeView.printRecipe(recipe);
         recipe = calculateAll(recipe);

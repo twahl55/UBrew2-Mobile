@@ -17,15 +17,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/bcrypt-0.9.0.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
     <orderEntry type="module-library" scope="TEST">
       <library name="JUnit4">
         <CLASSES>
@@ -62,5 +53,18 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="gson-2.8.9" level="project" />
+    <orderEntry type="library" name="resources" level="project" />
+    <orderEntry type="library" name="resources (2)" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/resources" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/resources" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="resources (3)" level="project" />
   </component>
 </module>

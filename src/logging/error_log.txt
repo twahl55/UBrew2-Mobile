@@ -3,3 +3,203 @@
 {Log Entry:{ Date: Tue Feb 08 21:39:29 MST 2022,  message: No line found }}
 {Log Entry:{ Date: Tue Feb 08 21:44:09 MST 2022,  message: No line found }}
 {Log Entry:{ Date: Tue Feb 08 21:50:55 MST 2022,  message: class models.MaltModel declares multiple JSON fields named unit }}
+{Log Entry:{ Date: Wed Feb 16 00:34:52 MST 2022,  message: For input string: "" }}
+{Log Entry:{ Date: Wed Feb 16 00:34:55 MST 2022,  message: For input string: "" }}
+{Log Entry:{ Date: Wed Feb 16 00:34:56 MST 2022,  message: For input string: "" }}
+{Log Entry:{ Date: Tue Feb 22 23:10:28 MST 2022,  message: null }}
+{Log Entry:{ Date: Tue Feb 22 23:14:05 MST 2022,  message: null }}
+{Log Entry:{ Date: Tue Feb 22 23:23:19 MST 2022,  message: ERROR: syntax error at or near "'Recipes'"
+  Position: 63 }}
+{Log Entry:{ Date: Tue Feb 22 23:24:45 MST 2022,  message: ERROR: syntax error at or near "'Recipes'"
+  Position: 63 }}
+{Log Entry:{ Date: Tue Feb 22 23:25:43 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Tue Feb 22 23:34:42 MST 2022,  message: ERROR: column "name" does not exist
+  Hint: Perhaps you meant to reference the column "recipes.Name".
+  Position: 8 }}
+{Log Entry:{ Date: Tue Feb 22 23:36:41 MST 2022,  message: ERROR: column "name" does not exist
+  Hint: Perhaps you meant to reference the column "recipes.Name".
+  Position: 8 }}
+{Log Entry:{ Date: Tue Feb 22 23:36:52 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Tue Feb 22 23:37:01 MST 2022,  message: This ResultSet is closed. }}
+{Log Entry:{ Date: Tue Feb 22 23:39:46 MST 2022,  message: This ResultSet is closed. }}
+{Log Entry:{ Date: Tue Feb 22 23:39:58 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Tue Feb 22 23:41:54 MST 2022,  message: This ResultSet is closed. }}
+{Log Entry:{ Date: Tue Feb 22 23:49:24 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Tue Feb 22 23:56:49 MST 2022,  message: class java.util.Arrays$ArrayList cannot be cast to class java.util.ArrayList (java.util.Arrays$ArrayList and java.util.ArrayList are in module java.base of loader 'bootstrap') }}
+{Log Entry:{ Date: Tue Feb 22 23:56:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:09:29 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:10:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:12:28 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:51:54 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 01:56:04 MST 2022,  message: Index 0 out of bounds for length 0 }}
+{Log Entry:{ Date: Wed Feb 23 01:56:47 MST 2022,  message: null }}
+{Log Entry:{ Date: Wed Feb 23 01:56:47 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 02:26:03 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 03:44:09 MST 2022,  message: Bad value for type double : EK Goldgings }}
+{Log Entry:{ Date: Wed Feb 23 03:45:08 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 03:51:59 MST 2022,  message: Bad value for type int : hop }}
+{Log Entry:{ Date: Wed Feb 23 03:52:01 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 15:36:49 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 15:37:56 MST 2022,  message: Bad value for type int : t }}
+{Log Entry:{ Date: Wed Feb 23 15:47:33 MST 2022,  message: ERROR: relation "recipeingredients" does not exist
+  Position: 65 }}
+{Log Entry:{ Date: Wed Feb 23 15:54:04 MST 2022,  message: ERROR: invalid reference to FROM-clause entry for table "ingredients"
+  Hint: Perhaps you meant to reference the table alias "i".
+  Position: 108 }}
+{Log Entry:{ Date: Wed Feb 23 15:54:59 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 15:59:29 MST 2022,  message: For input string: "" }}
+{Log Entry:{ Date: Wed Feb 23 17:17:35 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 17:17:35 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 17:17:35 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 17:17:35 MST 2022,  message: null }}
+{Log Entry:{ Date: Wed Feb 23 17:17:35 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 17:17:35 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 17:20:27 MST 2022,  message: Invalid salt revision }}
+{Log Entry:{ Date: Wed Feb 23 17:20:50 MST 2022,  message: Invalid salt revision }}
+{Log Entry:{ Date: Wed Feb 23 17:33:49 MST 2022,  message: null }}
+{Log Entry:{ Date: Wed Feb 23 17:33:51 MST 2022,  message: null }}
+{Log Entry:{ Date: Wed Feb 23 17:34:33 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 17:34:33 MST 2022,  message: null }}
+{Log Entry:{ Date: Wed Feb 23 17:36:55 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 17:39:11 MST 2022,  message: Returning autogenerated keys is only supported for 8.2 and later servers. }}
+{Log Entry:{ Date: Wed Feb 23 17:49:58 MST 2022,  message: ERROR: column "ingredientid" of relation "recipeingredients" does not exist
+  Position: 31 }}
+{Log Entry:{ Date: Wed Feb 23 17:49:59 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 17:49:59 MST 2022,  message: null }}
+{Log Entry:{ Date: Wed Feb 23 17:53:05 MST 2022,  message: null }}
+{Log Entry:{ Date: Wed Feb 23 17:53:05 MST 2022,  message: null }}
+{Log Entry:{ Date: Wed Feb 23 17:53:05 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 17:57:20 MST 2022,  message: ERROR: column "userid" of relation "recipes" does not exist
+  Position: 78 }}
+{Log Entry:{ Date: Wed Feb 23 17:57:21 MST 2022,  message: ERROR: column "ingredientid" of relation "recipeingredients" does not exist
+  Position: 31 }}
+{Log Entry:{ Date: Wed Feb 23 18:04:45 MST 2022,  message: null }}
+{Log Entry:{ Date: Wed Feb 23 18:04:45 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:07:09 MST 2022,  message: ERROR: column "userId" is of type uuid but expression is of type character varying
+  Hint: You will need to rewrite or cast the expression.
+  Position: 125 }}
+{Log Entry:{ Date: Wed Feb 23 18:07:43 MST 2022,  message: ERROR: insert or update on table "recipeingredients" violates foreign key constraint "recipeIngredients_recipeId_fkey"
+  Detail: Key (recipeId)=(0) is not present in table "recipes". }}
+{Log Entry:{ Date: Wed Feb 23 18:07:43 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:07:43 MST 2022,  message: null }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:31 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 18:13:50 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 19:41:39 MST 2022,  message: No line found }}
+{Log Entry:{ Date: Wed Feb 23 19:41:39 MST 2022,  message: null }}

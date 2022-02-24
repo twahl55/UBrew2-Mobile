@@ -18,11 +18,23 @@ public class RecipeModel implements Serializable{
     private float ibu;
     private float og;
     private float fg;
+    private int id;
     //private HashMap<String, Float > ingredientAmounts = new HashMap<String,Float>();
     private List<String> steps = new ArrayList<String>();
     private List<RecipeIngredient<MaltModel>> recipeMalts = new ArrayList<RecipeIngredient<MaltModel>>();
     private List<RecipeIngredient<HopModel>> recipeHops = new ArrayList<RecipeIngredient<HopModel>>();
+    public RecipeModel(){return;}
+    public RecipeModel(String name, float abv, float ibu, float og, float fg, String steps, int id/*,
+                       List<RecipeIngredient<MaltModel>> malts, List<RecipeIngredient<HopModel>> hops*/){
+        this.setName(name);
+        this.setAbv(abv);
+        this.setIbu(ibu);
+        this.setOg(og);
+        this.setFg(fg);
+        this.setId(id);
 
+        this.addNotes((ArrayList<String>)this.stringToSteps(steps));
+    }
     /** retrieves the name of the recipe */
     public String getName(){
         return this.name;
@@ -142,6 +154,14 @@ public class RecipeModel implements Serializable{
         return;
     }
 
+    public void addRecipeHops(List<RecipeIngredient<HopModel>> hops){
+        recipeHops.addAll(hops);
+    }
+
+    public void addRecipeMalts(List<RecipeIngredient<MaltModel>> malts){
+        recipeMalts.addAll(malts);
+    }
+
     @Override
     public String toString(){
         String output = "Name: " + this.name +" | ABV: " + this.abv + " | IBU: " + this.ibu + " | OG: " + this.og +
@@ -167,5 +187,33 @@ public class RecipeModel implements Serializable{
             counter ++;
         }
         return output;
+    }
+
+    /**turns the list of steps into a string */
+    public String stepsToString(boolean db){
+        int counter = 1;
+        String output = "Steps: ";
+        for(String step : steps){
+            String separator =" "+String.valueOf(counter)+". ";
+            if(db){
+                separator = "|";
+            }
+            output+= separator  + step;
+            counter ++;
+        }
+        return output;
+    }
+
+    public int getId(){
+        return this.id;
+    }
+    public void setId(int id){
+        this.id = id;
+    }
+
+    /** turns a string into a list of steps */
+    private List<String> stringToSteps(String input){
+        List<String> smallsteps = new ArrayList<String>(Arrays.asList(input.replaceAll("^\\|", "").split("|")));
+        return smallsteps;
     }
 }

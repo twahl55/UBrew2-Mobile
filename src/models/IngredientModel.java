@@ -8,6 +8,7 @@ package models;
 public abstract class IngredientModel implements java.io.Serializable{
 
     private  String name;
+    private int id;
 
     /**
      *IngredientModel Constructor
@@ -34,6 +35,12 @@ public abstract class IngredientModel implements java.io.Serializable{
     public String getName(){
         return this.name;
     }
+
+    public int getId(){
+        return this.id;
+    }
+
+    public void setId(int ids){this.id = ids;}
 
     /**
      * override the toString() functionality to appropriately stringify an ingredient

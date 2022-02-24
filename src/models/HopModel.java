@@ -17,6 +17,11 @@ public class HopModel extends IngredientModel {
         super( hopname);
         this.alphaAcid = alphaacid;
     }
+    public HopModel(String hopname, double alphaacid, int id){
+        super( hopname);
+        this.alphaAcid = alphaacid;
+        this.setId(id);
+    }
 
     /**
      *returns the AlphaAcid Member of an instance
